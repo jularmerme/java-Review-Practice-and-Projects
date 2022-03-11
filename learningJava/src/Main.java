@@ -1,8 +1,25 @@
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
-        /* Primitive Data Types */
+
+  public static void announceDeveloperTeaTime() {
+    System.out.println("Waiting for developer tea time...");
+    System.out.println("Type in a random word and press Enter to start developer tea time");
+    Scanner input = new Scanner(System.in);
+    input.next();
+    System.out.println("It's developer tea time!");
+  }
+
+  public static double calculateTotalMealPrice(double listedMealPrice, double tipRate, double taxRate) {
+    double tip = tipRate * listedMealPrice;
+    double tax = taxRate * listedMealPrice;
+    double result = listedMealPrice + tip + tax;
+    return result;
+//    System.out.println("Your total meal price is " + result);
+  }
+
+  public static void main(String[] args) {
+    /* Primitive Data Types */
         /* int studentAge = 20;
         double studentGPA = 3.5;
         char initialName = 'J';
@@ -15,20 +32,20 @@ public class Main {
         System.out.println(initialLastName);
         System.out.println(hasPerfectAttendance); */
 
-        /* Reference Data Types */
+    /* Reference Data Types */
         /* String name = "Julian";
         String lastName = "Mercado";
         System.out.println(name + " " + lastName);
         System.out.println(lastName); */
 
-        /* Input and output */
+    /* Input and output */
         /* System.out.println("What do you want to update it to?");
         Scanner input = new Scanner(System.in);
         studentGPA = input.nextDouble();
 
         System.out.println(name + " " + lastName + " " + "now has a GP of " + studentGPA); */
 
-       /* Fortune Teller code */
+    /* Fortune Teller code */
         /* System.out.println("Fortune Teller Mini Game");
         System.out.println("Pick a number between 1 and 10...");
         Scanner scanner = new Scanner(System.in);
@@ -40,7 +57,7 @@ public class Main {
             System.out.println("Your shoe selection will make you very happy today");
         } */
 
-        /* While Loop Control Flow */
+    /* While Loop Control Flow */
         /*Scanner input = new Scanner(System.in);
         boolean isOnRepeat = true;
         while(isOnRepeat) {
@@ -54,7 +71,7 @@ public class Main {
         }
         System.out.println("Playing next song");*/
 
-        // Another example using if Statements
+    // Another example using if Statements
         /* String question = "What is the result of 2 + 9?";
         String answerOne = "1. 4";
         String answerTwo = "2. 11";
@@ -75,7 +92,7 @@ public class Main {
             System.out.println("The answer is not correct");
         } */
 
-        System.out.println("Let's calculate the area of a triangle");
+       /* System.out.println("Let's calculate the area of a triangle");
 
         Scanner input = new Scanner(System.in);
 
@@ -95,8 +112,17 @@ public class Main {
         }
 
         double area = (base * height) / 2;
-        System.out.println("The area is " + area);
+        System.out.println("The area is " + area);*/
 
-    }
+   // announceDeveloperTeaTime();
+
+    double totalMealResult = calculateTotalMealPrice(50, 0.05, 0.05);
+    System.out.println(totalMealResult);
+
+    totalMealResult = totalMealResult/5;
+
+    System.out.println("Each person will pay: " + totalMealResult);
+
+  }
 }
 
