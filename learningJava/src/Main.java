@@ -128,7 +128,7 @@ public class Main {
 
     System.out.println("Each person will pay: " + totalMealResult);*/
 
-    Scanner input1 = new Scanner(System.in);
+    /*Scanner input1 = new Scanner(System.in);
     System.out.println("Worked hours: ");
     double employeeHours = input1.nextDouble();
 
@@ -140,7 +140,29 @@ public class Main {
     System.out.println("The employee got " + vacationDays + " vacation days.");
 
     double totalSalaryYear = calculateEmployeeYearSalary(employeeHours, employeeMoney);
-    System.out.println(totalSalaryYear);
+    System.out.println(totalSalaryYear);*/
+
+    // Creating a class with its constructor
+
+    /*Triangle triangleA = new Triangle(15, 8, 15, 8, 3);
+    Triangle triangleB = new Triangle(3, 2.598, 3, 3, 6);
+
+    double triangleAArea = triangleA.findArea();
+    System.out.println(triangleAArea);
+
+    double triangleBArea = triangleB.findArea();
+    System.out.println(triangleBArea);
+
+    System.out.println(triangleA.sideLenThree);
+    System.out.println(triangleB.base);
+
+    System.out.println(triangleA.numOfSides);*/
+
+
+    // Challenge: Student Profile
+    Student firstStudent = new Student("juan", "Gomez", 2022, 4.5, "Yes");
+    int graduateYear = firstStudent.increaseGraduateYear();
+    System.out.println(graduateYear);
 
   }
 }
