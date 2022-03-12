@@ -18,6 +18,11 @@ public class Main {
 //    System.out.println("Your total meal price is " + result);
   }
 
+  public static double calculateEmployeeYearSalary(double hours, double salary) {
+    double yearSalary = hours * salary;
+    return yearSalary;
+  }
+
   public static void main(String[] args) {
     /* Primitive Data Types */
         /* int studentAge = 20;
@@ -116,12 +121,26 @@ public class Main {
 
    // announceDeveloperTeaTime();
 
-    double totalMealResult = calculateTotalMealPrice(50, 0.05, 0.05);
+    /*double totalMealResult = calculateTotalMealPrice(50, 0.05, 0.05);
     System.out.println(totalMealResult);
 
     totalMealResult = totalMealResult/5;
 
-    System.out.println("Each person will pay: " + totalMealResult);
+    System.out.println("Each person will pay: " + totalMealResult);*/
+
+    Scanner input1 = new Scanner(System.in);
+    System.out.println("Worked hours: ");
+    double employeeHours = input1.nextDouble();
+
+    Scanner input2 = new Scanner(System.in);
+    System.out.println("Money per Hours: ");
+    double employeeMoney = input2.nextDouble();
+
+    double vacationDays = employeeHours/8;
+    System.out.println("The employee got " + vacationDays + " vacation days.");
+
+    double totalSalaryYear = calculateEmployeeYearSalary(employeeHours, employeeMoney);
+    System.out.println(totalSalaryYear);
 
   }
 }
