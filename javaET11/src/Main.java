@@ -1,7 +1,11 @@
+import model.ClothingItem;
+import model.ClothingSize;
+import model.Shirt;
+import model.Hat;
 import utilities.CalcHelper;
 
-import java.util.InputMismatchException;
-import java.util.Scanner;
+import java.text.NumberFormat;
+import java.util.*;
 import java.time.LocalDateTime;
 
 public class Main {
@@ -187,7 +191,7 @@ public class Main {
       e.printStackTrace();
     }*/
 
-    var sc = new Scanner(System.in);
+    /*var sc = new Scanner(System.in);
 
     double d1, d2;
     try {
@@ -223,8 +227,85 @@ public class Main {
         System.out.println("You didn't choose a valid operation.");
         return;
     }
-    System.out.println("The result is " + result);
+    System.out.println("The result is " + result);*/
 
+    /*var shirt = new Shirt(ClothingSize.L, 19.99, 3);
+    var hat = new Hat(ClothingSize.M,
+        29.99,
+        1);
+    */
+
+    /*String[] colors = new String[3];
+    colors [0] = "red";
+    colors[1] = "green";
+    colors[2] = "blue";
+    for (int i = 0; i < colors.length; i++) {
+      System.out.println(colors[i]);
+    }*/
+
+    // Manage resizable arrays with Lists
+    /*List<String> colors = new ArrayList<>();
+    colors.add("Yellow");
+    colors.add("Brown");
+    colors.add("black");
+
+    for (int i = 0; i < colors.size(); i++) {
+      System.out.println(colors.get(i));
+    }
+
+    List<ClothingItem> items = new ArrayList<>();
+    items.add(new Shirt(ClothingSize.L,
+        19.99,
+        4));
+    items.add(new Hat(ClothingSize.M,
+        29.99,
+        3));
+
+    for(ClothingItem item : items) {
+      displayItemDetails(item);
+    }*/
+
+    /*ClothingItem[] items = {
+        new Shirt(
+            ClothingSize.L,
+            19.99,
+            3
+        ),
+        new Hat(ClothingSize.M,
+            29.99,
+            1)
+    };
+    for (ClothingItem item : items) {
+      displayItemDetails(item);
+    }*/
+
+    Map<String, ClothingItem> items = new HashMap<>();
+    items.put("shirt", new Shirt(
+        ClothingSize.L,
+        19.99,
+        3
+    ));
+    items.put("hat",  new Hat(
+        ClothingSize.M,
+        29.99,
+        1));
+    /*var theHat = items.get("hat");
+    var theShirt = items.get("shirt");
+    displayItemDetails(theHat);
+    displayItemDetails(theShirt);*/
+
+    var keys = items.keySet();
+    for(String key : keys) {
+      var item = items.get(key);
+      displayItemDetails(item);
+    }
+  }
+
+  private static void displayItemDetails(ClothingItem item) {
+    var totalPrice = item.getPrice() * item.getQuantity();
+    var formatter = NumberFormat.getCurrencyInstance();
+    var output = String.format("Your %s %s order will cost %s", item.getSize(), item.getType(), formatter.format(totalPrice));
+    System.out.println(output);
   }
 
   private static double getInput(Scanner sc, String prompt) {
