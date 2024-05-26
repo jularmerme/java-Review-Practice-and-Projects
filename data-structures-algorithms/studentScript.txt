@@ -1,0 +1,10 @@
+Student studentOne = new Student(1, "Jhon", "Smith");
+Student studentOne = new Student(1, "Ruby", "Capes");
+Student studentOne = new Student(1, "Dulci", "Larose");
+Student studentOne = new Student(1, "Brander", "Chaucer");
+Student studentOne = new Student(1, "Kip", "Quayle");
+Student studentOne = new Student(1, "Joby", "Sanday");
+Student studentOne = new Student(1, "Sheree", "Wodgen");
+Student studentOne = new Student(1, "Honor", "Egell");
+Student studentOne = new Student(1, "Munmro", "Limpertz");
+Student studentOne = new Student(1, "Thomas", "Keme");
