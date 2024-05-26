@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www/thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Access Denied</title>
+    <style>
+        .access-denied {
+            width: 30em;
+            text-align: center;
+            font-weight: bold;
+            margin: 0px auto;
+            padding: 0px;
+        }
+        .access-number {
+            font-size: 15em;
+        }
+        .access-text-primary {
+            font-size: 3em;
+        }
+        .access-text-secondary {
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+<hr>
+<div class="access-denied">
+    <div class="access-number">
+        403
+    </div>
+    <div class="access-text-primary">
+        Access Denied
+    </div>
+    <div class="access-text-secondary">
+        Sorry, You are not authorize to access this page
+    </div>
+</div>
+<hr>
+<a th:href="@{/}">Back to HomePage</a>
+</body>
+</html>
