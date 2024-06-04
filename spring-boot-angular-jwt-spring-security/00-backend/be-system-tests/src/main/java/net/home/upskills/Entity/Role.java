@@ -12,14 +12,14 @@ public class Role {
     @Id
     private Long roleId;
 
-    private String name;
+    private String roleName;
 
     public Role() {
     }
 
     public Role(Long roleId, String name) {
         this.roleId = roleId;
-        this.name = name;
+        this.roleName = name;
     }
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "role")
@@ -33,12 +33,12 @@ public class Role {
         this.roleId = roleId;
     }
 
-    public String getName() {
-        return name;
+    public String getRoleName() {
+        return roleName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setRoleName(String name) {
+        this.roleName = name;
     }
 
     public Set<UserRole> getUserRoles() {
