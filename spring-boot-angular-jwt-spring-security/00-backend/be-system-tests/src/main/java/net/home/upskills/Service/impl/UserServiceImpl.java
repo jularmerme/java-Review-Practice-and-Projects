@@ -1,9 +1,10 @@
-package net.home.upskills.Service;
+package net.home.upskills.Service.impl;
 
 import net.home.upskills.Entity.User;
 import net.home.upskills.Entity.UserRole;
 import net.home.upskills.Repository.RoleRepository;
 import net.home.upskills.Repository.UserRepository;
+import net.home.upskills.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -22,7 +22,7 @@ public class UserController {
     public User saveUser(@RequestBody User user) throws Exception {
 
         user.setProfile("default.png");
-        Set<UserRole> roles = new HashSet<>();
+        Set<UserRole> userRoles = new HashSet<>();
 
         Role role = new Role();
         role.setRoleId(2L);
@@ -32,7 +32,8 @@ public class UserController {
         userRole.setUser(user);
         userRole.setRole(role);
 
-        return userService.saveUser(user, roles);
+        userRoles.add(userRole);
+        return userService.saveUser(user, userRoles);
     }
 
     @GetMapping("/{username}")
