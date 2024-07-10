@@ -1,0 +1,4 @@
+# Created at 2024-07-10T01:40:48.567
+Boot Manifest-JAR contains absolute paths in classpath 'D:\Repositories\java-Review-Practice-and-Projects\spring-boot-unit-testing\17.junit-test-coverage-maven-jacoco\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+
