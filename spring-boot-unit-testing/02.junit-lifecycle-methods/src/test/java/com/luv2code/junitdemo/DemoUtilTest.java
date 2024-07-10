@@ -1,5 +1,6 @@
 package com.luv2code.junitdemo;
 
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -17,6 +18,19 @@ public class DemoUtilTest {
         System.out.println("@BeforeEach executes before the execution of each test Method");
     }
 
+    @AfterEach
+    void tearDownAfterEach() {
+        System.out.println("Running @AfterEach\n");
+    }
+
+    @BeforeAll
+    static void setupBeforeEachAllMethods() {
+        System.out.println("@BeforeAll executes only before all test methods.");
+    }
+
+    static void tearDownAfterAllMethods() {
+        System.out.println("@AfterAll executes only once after all test methods");
+    }
 
     @Test
     void testEqualAndNotEquals() {
